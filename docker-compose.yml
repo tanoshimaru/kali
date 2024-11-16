@@ -1,0 +1,11 @@
+services:
+  kali-linux:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    tty: true
+    stdin_open: true
+    volumes:
+      - .:/kali
+    ports:
+      - 3390:3390
