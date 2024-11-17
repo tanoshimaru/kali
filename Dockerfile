@@ -9,6 +9,8 @@ RUN wget https://gitlab.com/kalilinux/recipes/kali-scripts/-/raw/main/xfce4.sh &
 
 RUN apt-get install -y dbus-x11
 
+RUN echo "root:root" | chpasswd
+
 ARG UID=1000
 ARG GID=1000
 RUN groupadd -g $GID kali && \
